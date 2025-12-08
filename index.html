@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adylhide</title>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========================================================= -->
+<!-- NAVBAR (GLASS) -->
+<!-- ========================================================= -->
+<nav class="navbar">
+    <a href="#project">Projects</a>
+    <a href="#certs">Certificates</a>
+    <a href="pages/journal.html#journal">Journal</a>
+    <a href="#about">Contact</a>
+</nav>
+
+<main>
+
+    <!-- ========================================================= -->
+    <!-- HERO SECTION -->
+    <!-- ========================================================= -->
+    <section class="hero-section">
+        <!-- Particle Canvas -->
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-container">
+            <!-- Portrait & Metal Frame -->
+            <div class="hero-3d-wrap">
+                <div class="metal-ring"></div>
+                <div class="engrave-lines"></div>
+                <div class="hero-image-wrapper">
+                    <img src="assets/ad.png" class="hero-image">
+                </div>
+            </div>
+            <h1 class="hero-name">ADYLHIDE</h1>
+        </div>
+    </section>
+
+    <!-- SKILLS CAROUSEL -->
+    <section id="skills" class="container skills-section">
+        <div class="glass-card">
+            <div class="skills-carousel" aria-roledescription="carousel" aria-label="Skills carousel">
+            <div class="skills-track" id="skillsTrack" aria-live="polite">
+                <div class="skill-box"><img alt="PHP" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"></div>
+                <div class="skill-box"><img alt="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div>
+                <div class="skill-box"><img alt="Firebase" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"></div>
+                <div class="skill-box"><img alt="C#" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"></div>
+                <div class="skill-box"><img alt="MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div>
+                <div class="skill-box"><img alt="Postman" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"></div>
+                <div class="skill-box"><img alt="Figma" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"></div>
+                <div class="skill-box"><img alt="Android Studio" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"></div>
+                <div class="skill-box"><img alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"></div>
+                <div class="skill-box"><img alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section" id="project">
+        <h2 class="title">Projects</h2>
+        <!-- project 1 -->
+        <div class="project-card-horizontal">
+            <div class="project-info">
+                <div class="p-meta">HTML • CSS • JS • PHP • MySQL • Bootstrap</div>
+                <div class="p-title">Crusader Merch Hub</div>
+                <div class="p-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="p-role">Designer</div>
+            </div>
+            <div class="project-image-wrapper" aria-roledescription="carousel" aria-label="Project images carousel">
+                <div class="project-track" role="group" aria-live="polite">
+                    <img src="assets/merch-1.png" alt="project slide 1">
+                    <img src="assets/merch-2.png" alt="project slide 2">
+                    <img src="assets/merch-3.png" alt="project slide 3">
+                </div>
+                <div class="project-indicators" role="tablist" aria-label="Project image pages">
+                    <button class="project-dot active" type="button" data-index="0" aria-label="View slide 1" aria-pressed="true"></button>
+                    <button class="project-dot" type="button" data-index="1" aria-label="View slide 2" aria-pressed="false"></button>
+                    <button class="project-dot" type="button" data-index="2" aria-label="View slide 3" aria-pressed="false"></button>
+                </div>
+            </div>
+        </div>
+        <!-- project 2 -->
+        <div class="project-card-horizontal">
+            <div class="project-info">
+                <div class="p-meta">HTML • CSS • JS • PHP</div>
+                <div class="p-title">Wander Travel & Tours</div>
+                <div class="p-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="p-role">Designer</div>
+            </div>
+            <div class="project-image-wrapper" aria-roledescription="carousel" aria-label="Project images carousel">
+                <div class="project-track" role="group" aria-live="polite">
+                    <img src="assets/wander-1.png" alt="project slide 1">
+                    <img src="assets/wander-2.png" alt="project slide 2">
+                    <img src="assets/wander-3.png" alt="project slide 3">
+                </div>
+                <div class="project-indicators" role="tablist" aria-label="Project image pages">
+                    <button class="project-dot active" type="button" data-index="0" aria-label="View slide 1" aria-pressed="true"></button>
+                    <button class="project-dot" type="button" data-index="1" aria-label="View slide 2" aria-pressed="false"></button>
+                    <button class="project-dot" type="button" data-index="2" aria-label="View slide 3" aria-pressed="false"></button>
+                </div>
+            </div>
+        </div>
+        <!-- project 3 -->
+        <div class="project-card-horizontal">
+            <div class="project-info">
+                <div class="p-meta">HTML • CSS • JS • PHP</div>
+                <div class="p-title">MinuteMeals</div>
+                <div class="p-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="p-role">Full Stack Developer</div>
+            </div>
+            <div class="project-image-wrapper" aria-roledescription="carousel" aria-label="Project images carousel">
+                <div class="project-track" role="group" aria-live="polite">
+                    <img src="assets/meals-1.png" alt="project slide 1">
+                    <img src="assets/meals-2.png" alt="project slide 2">
+                    <img src="assets/meals-3.png" alt="project slide 3">
+                </div>
+                <div class="project-indicators" role="tablist" aria-label="Project image pages">
+                    <button class="project-dot active" type="button" data-index="0" aria-label="View slide 1" aria-pressed="true"></button>
+                    <button class="project-dot" type="button" data-index="1" aria-label="View slide 2" aria-pressed="false"></button>
+                    <button class="project-dot" type="button" data-index="2" aria-label="View slide 3" aria-pressed="false"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certs" class="container">
+    <h2 class="title">Certificates & Participation</h2>
+
+        <div class="cert-grid">
+            <div class="cert-card" onclick="openCert(this)">
+                <img src="assets/bitdegree.png" alt="Certificate 1"/>
+            </div>
+
+            <div class="cert-card" onclick="openCert(this)">
+                <img src="assets/ideas.png" alt="Certificate 2"/>
+            </div>
+
+            <div class="cert-card" onclick="openCert(this)">
+                <img src="assets/WATT.jpg" alt="Certificate 3"/>
+            </div>
+
+            <div class="cert-card" onclick="openCert(this)">
+                <img src="assets/placeholder.jpg" alt="Certificate 4"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="cert-modal-bg" id="certModal">
+        <img id="certModalImg">
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="container">
+        <div class="glass-card about-card">
+            <div class="about-content">
+                <p>Hello! I'm Adylhide. I design and build minimal, high-quality interfaces with a focus on clean UX and reliable front-end engineering. 
+                    I enjoy combining visual design with practical code to deliver delightful experiences.</p>
+
+                <p>If you'd like to get in touch, email me at <a href="mailto:roseadelhiede.ahat@hcdc.edu.ph" class="link-email" target="_blank">roseadelhiede.ahat@hcdc.edu.ph</a>.</p>
+
+                <p class="small">Based in Davao City. Available for freelance and collaborative projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLAGE SECTION -->
+    <section id="collage" class="container">
+        <h2 class="title">Photo Dump 2k25</h2>
+        <div class="collage-grid">
+            <img src="assets/tour11.jpg" alt="TOUR_1">
+            <img src="assets/tour3.jpg" alt="TOUR_2">
+            <img src="assets/tour18.JPG" alt="TOUR_3">
+            <img src="assets/tour17.JPG" alt="TOUR_4">
+            <img src="assets/tour10.jpg" alt="TOUR_5">
+            <img src="assets/tour21.JPG" alt="TOUR_6">
+            <img src="assets/tour24.JPG" alt="TOUR_7">
+            <img src="assets/tour19.JPG" alt="TOUR_8">
+            <img src="assets/tour22.jpg" alt="TOUR_9">
+            <img src="assets/tour8.jpg" alt="TOUR_10">
+        </div>
+    </section>
+</main>
+
+    
+    <!-- CUSTOM JS -->
+    <script>
+        /* ==========================================================
+        PARTICLE BACKGROUND
+        ========================================================== */
+
+        const canvas = document.getElementById("particle-canvas");
+        const ctx = canvas.getContext("2d");
+
+        let w, h;
+        function resize(){
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener("resize", resize);
+
+        let particles = [];
+
+        for(let i=0;i<80;i++){
+            particles.push({
+                x: Math.random()*w,
+                y: Math.random()*h,
+                size: Math.random()*2 + 1,
+                speed: Math.random()*0.4 + 0.2
+            });
+        }
+
+        function drawParticles(){
+            ctx.clearRect(0,0,w,h);
+            ctx.fillStyle="rgba(255, 255, 255, 1)";
+            
+            particles.forEach(p=>{
+                ctx.beginPath();
+                ctx.rect(p.x,p.y,p.size,p.size);
+                ctx.fill();
+
+                p.y -= p.speed;
+                if(p.y < -10) p.y = h + 10;
+            });
+
+            requestAnimationFrame(drawParticles);
+        }
+        drawParticles();
+
+
+        /* ==========================================================
+        GSAP HERO ANIMATION (enhanced)
+        ========================================================== */
+
+        const heroTimeline = gsap.timeline();
+
+        heroTimeline.from(".hero-3d-wrap", {
+            opacity: 0,
+            scale: 0.9,
+            y: 40,
+            duration: 1.2,
+            ease: "back.out(1.2)"
+        })
+        .from(".hero-name", {
+            opacity: 0,
+            y: 30,
+            duration: 0.9,
+            ease: "power3.out"
+        }, "-=0.7")
+        .from(".hero-sub", {
+            opacity: 0,
+            y: 20,
+            duration: 0.8,
+            ease: "power2.out"
+        }, "-=0.5");
+
+        // Subtle floating animation on hero image
+        gsap.to(".hero-image", {
+            y: -10,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        /* =====================================================
+        SKILLS CAROUSEL (infinite smooth scroll)
+        ==================================================== */
+        (function () {
+            const skillsTrack = document.getElementById("skillsTrack");
+            if (!skillsTrack) return;
+
+            const skillBoxes = Array.from(skillsTrack.querySelectorAll('.skill-box'));
+            if (skillBoxes.length === 0) return;
+
+            // Duplicate boxes for seamless infinite loop
+            skillBoxes.forEach(box => {
+                skillsTrack.appendChild(box.cloneNode(true));
+            });
+
+            const BOX_WIDTH = 140;
+            const GAP = 32;
+            const ITEM_WIDTH = BOX_WIDTH + GAP;
+            const ORIGINAL_COUNT = skillBoxes.length;
+            const TOTAL_WIDTH = ITEM_WIDTH * ORIGINAL_COUNT;
+            
+            let scrollPos = 0;
+            const SPEED = 0.5; // pixels per frame
+
+            function scroll() {
+                scrollPos += SPEED;
+                
+                // Seamless loop: reset when scrolled past originals
+                if (scrollPos >= TOTAL_WIDTH) {
+                    scrollPos = 0;
+                }
+                
+                skillsTrack.style.transform = `translateX(-${scrollPos}px)`;
+                requestAnimationFrame(scroll);
+            }
+
+            // Remove transition for smooth continuous motion
+            skillsTrack.style.transition = 'none';
+            
+            // Start scrolling
+            scroll();
+        })();
+
+        /* =====================================================
+        PROJECT IMAGE CAROUSEL (MULTIPLE CARDS SUPPORTED)
+        ===================================================== */
+        function initProjectCarousels() {
+            document.querySelectorAll(".project-card-horizontal").forEach((card, cardIndex) => {
+
+                const wrapper = card.querySelector(".project-image-wrapper");
+                const track = card.querySelector(".project-track");
+                let images = Array.from(track.querySelectorAll("img"));
+                let indicatorsContainer = card.querySelector(".project-indicators");
+
+                if (!wrapper || !track || images.length === 0) return;
+
+                wrapper.setAttribute('tabindex', '0');
+
+                /** Rebuild indicators if needed **/
+                let indicators = Array.from(indicatorsContainer.querySelectorAll(".project-dot"));
+                if (indicators.length !== images.length) {
+                    indicatorsContainer.innerHTML = "";
+                    indicators = [];
+                    for (let i = 0; i < images.length; i++) {
+                        let btn = document.createElement("button");
+                        btn.className = "project-dot";
+                        btn.dataset.index = i;
+                        btn.setAttribute("aria-label", `View slide ${i+1}`);
+                        btn.setAttribute("aria-pressed", "false");
+                        btn.setAttribute("tabindex", "-1");
+                        indicatorsContainer.appendChild(btn);
+                        indicators.push(btn);
+                    }
+                }
+
+                /** Dynamic width layout **/
+                function configureTrack() {
+                    track.style.width = `${images.length * 100}%`;
+                    track.style.display = "flex";
+                    track.style.flexWrap = "nowrap";
+
+                    images.forEach(img => {
+                        img.style.width = `${100 / images.length}%`;
+                        img.style.flex = "0 0 auto";
+                        img.style.objectFit = "cover";
+                        img.style.height = "100%";
+                    });
+                }
+
+                /** Wait for image loads **/
+                const loadPromises = images.map(img => new Promise(res => {
+                    if (img.complete) return res();
+                    img.addEventListener("load", res, { once: true });
+                    img.addEventListener("error", res, { once: true });
+                }));
+
+                let current = 0;
+                const ROTATE_MS = 3500;
+                let intervalId = null;
+
+                /** Correct transform calculation **/
+                function updateTransform() {
+                    const step = 100 / images.length;
+                    const offset = current * step;
+                    track.style.transform = `translateX(-${offset}%)`;
+                }
+
+                function setActive(index) {
+                    current = ((index % images.length) + images.length) % images.length;
+                    updateTransform();
+
+                    indicators.forEach((btn, i) => {
+                        const active = i === current;
+                        btn.classList.toggle("active", active);
+                        btn.setAttribute("aria-pressed", active);
+                        btn.setAttribute("tabindex", active ? "0" : "-1");
+                    });
+                }
+
+                function goTo(i) {
+                    setActive(i);
+                }
+
+                /** Indicator events **/
+                indicators.forEach(btn => {
+                    btn.addEventListener("click", e => {
+                        goTo(Number(e.currentTarget.dataset.index));
+                        restartAuto();
+                    });
+                });
+
+                /** Hover pause **/
+                wrapper.addEventListener("mouseenter", stopAuto);
+                wrapper.addEventListener("mouseleave", startAuto);
+
+                /** Auto rotate **/
+                function startAuto() {
+                    if (intervalId) return;
+                    intervalId = setInterval(() => goTo(current + 1), ROTATE_MS);
+                }
+                function stopAuto() {
+                    clearInterval(intervalId);
+                    intervalId = null;
+                }
+                function restartAuto() {
+                    stopAuto();
+                    startAuto();
+                }
+
+                /** Final setup **/
+                Promise.all(loadPromises).then(() => {
+                    images = Array.from(track.querySelectorAll("img"));
+                    configureTrack();
+                    setActive(0);
+                    startAuto();
+                });
+            });
+        }
+
+
+        // Initialize carousels after a delay to ensure DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(initProjectCarousels, 100);
+            });
+        } else {
+            setTimeout(initProjectCarousels, 100);
+        }
+
+        
+        /* =====================================================
+        CERTIFICATE MODAL (IMPROVED)
+        ===================================================== */
+        function openCert(el) {
+            const modal = document.getElementById("certModal");
+            const modalImg = document.getElementById("certModalImg");
+
+            modalImg.src = el.querySelector("img").src;
+            modal.classList.add("active");
+
+            modal.onclick = () => modal.classList.remove("active");
+        }
+
+        /* COLLAGE MODAL */
+        document.querySelectorAll(".collage-grid img").forEach(img => {
+            img.addEventListener("click", () => {
+                const modal = document.getElementById("collageModal");
+                const modalImg = document.getElementById("collageModalImg");
+                modalImg.src = img.src;
+                modal.classList.add("active");
+            });
+        });
+
+        document.getElementById("collageModal").addEventListener("click", () => {
+            document.getElementById("collageModal").classList.remove("active");
+        });
+
+        feather.replace()
+
+    </script>
+
+</body>
+</html>

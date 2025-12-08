@@ -1,0 +1,338 @@
+/* ==========================================
+   GLOBAL BASE
+========================================== */
+body {
+    background: #0d0d0f;
+    font-family: "Inter", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    scroll-behavior: smooth;
+    --text-color: #F3F4ED; 
+}
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Apply consistent spacing to all major sections */
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+/* ==========================================
+   JOURNAL TITLE
+========================================== */
+.journal-title {
+    text-align: center;
+    margin-top: 160px;
+    margin-bottom: 60px;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--text-color);
+    opacity: 0;
+}
+
+
+/* ==========================================
+   JOURNAL GRID
+========================================== */
+.journal-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    align-items: center;
+}
+
+
+/* ==========================================
+   JOURNAL CARD (Glass UI)
+========================================== */
+.journal-card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 40px;
+    width: 85%;
+    border-radius: 22px;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.journal-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+/* ==========================================
+   JOURNAL IMAGES
+========================================== */
+.j-img-wrap {
+    width: 500px;
+    height: 360px;
+    border-radius: 18px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.55);
+}
+
+.j-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==========================================
+   JOURNAL TEXT
+========================================== */
+.j-text {
+    flex: 1;
+}
+
+.j-text h3 {
+    margin: 0 0 8px;
+    font-size: 1.58rem;
+    font-weight: 700;
+}
+
+.place-date {
+    opacity: 0.75;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.j-text p {
+    opacity: 0.85;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+
+/* ==========================================
+   CITY TOUR SECTION
+========================================== */
+.city-tour-section {
+    padding-top: 100px;
+    padding-bottom: 140px;
+}
+
+.city-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--text-color);
+
+    opacity: 0;
+    transform: translateY(20px);
+    position: relative;
+    z-index: 10;
+}
+
+
+
+/* ==========================================
+   CITY CAROUSEL (Full-Image Cards + Overlay)
+========================================== */
+
+.carousel {
+    --items: 6;
+    --carousel-duration: 35s;
+    --carousel-width: min(90vw, 900px);
+    --carousel-item-width: 280px;
+    --carousel-item-height: 470px;
+    --carousel-item-gap: 2rem;
+
+    position: relative;
+    width: var(--carousel-width);
+    height: var(--carousel-item-height);
+    margin: 20px auto 60px auto;
+
+    overflow: visible;
+    mask-image: linear-gradient(to right, transparent, black 12% 88%, transparent);
+}
+
+
+/* ==========================================
+   CITY CARD – FULL IMAGE + OVERLAY TITLE
+========================================== */
+
+.carousel > article {
+    position: absolute;
+    top: 0;
+    left: calc(100% + var(--carousel-item-gap));
+
+    width: var(--carousel-item-width);
+    height: var(--carousel-item-height);
+
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+
+    animation: marquee var(--carousel-duration) linear infinite;
+    animation-delay: calc((var(--carousel-duration) / var(--items)) * var(--i) * -1);
+    will-change: transform;
+
+    /* Hover effect */
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.carousel > article:hover {
+    transform: scale(1.05) translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+}
+
+
+/* ==========================================
+   IMAGE fills the entire card
+========================================== */
+
+.city-img-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.city-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==========================================
+   TITLE OVERLAY at bottom of image
+========================================== */
+
+.city-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 1.1rem 1rem;
+
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3), transparent);
+
+    text-align: center;
+    pointer-events: none;
+}
+
+.city-info h2 {
+    margin: 0;
+    color: #1E201E;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   Index Assignment
+========================================== */
+
+.carousel > article:nth-child(1) { --i: 0; }
+.carousel > article:nth-child(2) { --i: 1; }
+.carousel > article:nth-child(3) { --i: 2; }
+.carousel > article:nth-child(4) { --i: 3; }
+.carousel > article:nth-child(5) { --i: 4; }
+.carousel > article:nth-child(6) { --i: 5; }
+
+
+/* ==========================================
+   MARQUEE ANIMATION
+========================================== */
+
+@keyframes marquee {
+    100% {
+        transform: translateX(
+            calc((var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) * -1)
+        );
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE (Same Behavior)
+========================================== */
+
+@media (max-width: 920px) {
+
+    .carousel {
+        --carousel-width: 95vw;
+        --carousel-item-width: 240px;
+        --carousel-item-height: 420px;
+    }
+
+    .carousel > article {
+        height: var(--carousel-item-height);
+    }
+
+    .city-info h2 {
+        font-size: 1.15rem;
+    }
+}
+
+
+
+/* ==========================================
+   CAROUSEL ANIMATION
+========================================== */
+@keyframes marquee {
+    100% {
+        transform: translateX(
+            calc((var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) * -1)
+        );
+    }
+}
+
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 920px) {
+
+    .journal-card {
+        flex-direction: column !important;
+        text-align: center;
+        width: 95%;
+        padding: 30px;
+    }
+
+    .j-img-wrap {
+        width: 100%;
+        height: 260px;
+    }
+
+    .carousel {
+        --carousel-width: 95vw;
+        --carousel-item-width: 240px;
+        --carousel-item-height: 420px; /* scalable */
+    }
+
+    .carousel > article {
+        height: var(--carousel-item-height);
+    }
+}
