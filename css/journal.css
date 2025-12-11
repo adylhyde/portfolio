@@ -336,3 +336,94 @@ section {
         height: var(--carousel-item-height);
     }
 }
+
+@media (max-width: 1140px) {
+    .journal-card {
+        width: 90%; /* Adjust the width to fit better on smaller screens */
+        padding: 35px;
+        margin: 0 auto; /* Center the cards */
+    }
+
+    .j-img-wrap {
+        width: 450px; /* Adjust image width for smaller devices */
+        height: 320px;
+    }
+
+    .j-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .place-date {
+        font-size: 14px;
+    }
+
+    .j-text p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .journal-card {
+        flex-direction: column !important; /* Stack the card content */
+        text-align: center;
+        width: 85%;
+        padding: 30px;
+        margin: 0 auto; /* Center the cards */
+    }
+
+    .j-img-wrap {
+        width: 100%;
+        height: 260px; /* Reduce image height */
+    }
+
+    .j-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .place-date {
+        font-size: 13px;
+    }
+
+    .j-text p {
+        font-size: 14px;
+        line-height: 1.4; /* Adjust line height for readability */
+    }
+
+    /* Journal Grid Adjustment for smaller tablets */
+    .journal-grid {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 425px) {
+    /* Adjust Journal Card Layout */
+    .journal-card {
+        width: 65%;
+        flex-direction: column !important;
+        gap: 12px;
+        padding: 20px;
+        margin: 0 auto; /* Center the cards */
+    }
+
+    .j-img-wrap {
+        width: 100%;
+        height: 200px; /* Smaller height for images */
+    }
+
+    .j-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .place-date {
+        font-size: 12px;
+    }
+
+    .j-text p {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+    .journal-grid {
+        gap: 40px;
+    }
+}

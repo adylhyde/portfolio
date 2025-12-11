@@ -46,9 +46,6 @@ h2 {
 /* ==========================================================
    NAVBAR (GLASS)
 ========================================================== */
-/* ==========================================================
-   NAVBAR (GLASS)
-========================================================== */
 .navbar {
     position: fixed;
     top: 18px;
@@ -532,18 +529,15 @@ h2 {
 }
 
 @media (max-width: 425px) {
-    /* Adjusting project card layout for very small screens */
     .project-card-horizontal {
         display: flex;
-        flex-direction: column;  /* Stack content vertically */
-        gap: 8px;  /* Reduce the gap between elements */
-        margin: 10px auto;  /* Center the cards horizontally */
-        padding: 10px;  /* Adjust padding to fit smaller screens */
-        height: auto;  /* Allow the height to adapt based on content */
-        width: 350px;  /* Set a fixed width to maintain consistent sizing */
-        align-items: center;  /* Center content horizontally */
-        justify-content: center;  /* Center content vertically */
-        border-radius: 16px;  /* Round the corners for aesthetics */
+        flex-direction: column;  
+        gap: 8px; 
+        height: auto;
+        width: 350px; 
+        align-items: center; 
+        justify-content: center;  
+        border-radius: 16px;
     }
 
     .project-info {
