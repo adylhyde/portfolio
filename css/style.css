@@ -15,13 +15,17 @@
 
 body {
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;    
     background: var(--bg);
     color: white;
     overflow-x: hidden;
     display: flex;  /* enables flexbox layout */
     flex-direction: column;  /* stack content vertically */
     min-height: 100vh;
+}
+
+main {
+    flex: 1;  /* allows main to grow and fill available space */
 }
 
 
@@ -39,6 +43,9 @@ h2 {
 }
 
 
+/* ==========================================================
+   NAVBAR (GLASS)
+========================================================== */
 /* ==========================================================
    NAVBAR (GLASS)
 ========================================================== */
@@ -76,6 +83,45 @@ h2 {
     color: white;
     background: rgba(255,255,255,0.07);
 }
+
+.navbar-toggle {
+    display: none;  /* Hide hamburger icon by default */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .navbar-links {
+        display: none;  /* Hide navbar links initially */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-links.active {
+        display: flex;  /* Show navbar links when active */
+    }
+
+    /* Hide the hamburger icon when the menu is open */
+    .navbar-toggle.active {
+        display: none;
+    }
+}
+
+/* For larger screens (above 768px), show navbar links normally */
+@media (min-width: 769px) {
+    .navbar-links {
+        display: flex;  /* Show navbar links on larger screens */
+        gap: 16px;
+    }
+
+    .navbar-toggle {
+        display: none;  /* Hide the hamburger icon on desktop */
+    }
+}
+
 
 
 /* HERO SECTION */
@@ -675,6 +721,77 @@ h2 {
     }
 }
 
+/* Adjust project card layout for mobile */
+@media (max-width: 768px) {
+    .project-card-horizontal {
+        flex-direction: column;
+        gap: 12px;
+        margin: 20px;
+        padding: 15px;
+        height: auto;
+        width: 90%;
+    }
+
+    .project-info {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .project-image-wrapper {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .project-track img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+/* Adjust project title, description, and meta text */
+@media (max-width: 640px) {
+    .p-title {
+        font-size: 20px;
+    }
+
+    .p-desc {
+        font-size: 14px;
+    }
+
+    .p-meta, .p-role {
+        font-size: 12px;
+    }
+}
+
+/* Adjust collage layout */
+@media (max-width: 600px) {
+    .collage-grid {
+        column-count: 1;
+    }
+
+    .collage-grid img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Adjust certificates grid */
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* ==========================================================
    FOOTER STYLES
 ========================================================== */
@@ -683,16 +800,18 @@ h2 {
     color: var(--footertext);
     text-align: center;
     padding: 20px 0;
-    position: fixed;
-    margin-top: auto;  /* ensures the footer is pushed to the bottom */
-    bottom: 0;
-    left: 0;
-    right: 0;
     font-size: 14px;
-    z-index: 100;
+    position: relative;  /* Change from fixed to relative */
+    width: 100%;
+    /* Ensure the footer goes to the bottom when content is short */
+    bottom: 0;
 }
 
 .footer p {
     margin: 0;
 }
 
+#currentYear {
+    font-weight: 600;
+    color: red;
+}
