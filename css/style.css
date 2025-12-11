@@ -278,15 +278,15 @@ h2 {
 }
 
 /* Responsive */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .skill-box { 
-        width: 88px; 
-        height: 88px; 
-        border-radius: 12px; 
+        width: 95px; 
+        height: 95px; 
+        border-radius: 8px; 
     }
     .skill-box img { 
-        width: 48px; 
-        height: 48px; }
+        width: 68px; 
+        height: 68px; }
     .skills-carousel {
         margin: 1.2rem auto;
         padding: 0.6rem;
@@ -490,6 +490,69 @@ h2 {
     max-width: 360px;
     margin-bottom: 24px;
 }
+
+@media (max-width: 768px) {
+    .project-card-horizontal {
+        flex-direction: column; /* Stack the content vertically on mobile */
+        gap: 12px;
+        margin: 15px 20px; /* Margin for spacing between cards */
+        padding: 15px;
+        height: auto;  /* Allow the height to adjust based on content */
+        width: 90%;  /* Ensure card takes up a good portion of the screen */
+        align-items: center; /* Center the content horizontally */
+    }
+
+    .project-info {
+        width: 100%;  /* Use full width for the project info */
+        padding: 10px; /* Padding to give content space */
+        text-align: center;  /* Center the text in mobile view */
+    }
+
+    .project-image-wrapper {
+        width: 100%;  /* Make the image wrapper take full width */
+        height: 250px;  /* Adjust the height of images */
+        object-fit: cover; /* Ensure the image fits properly */
+    }
+
+    .p-title {
+        font-size: 20px;  /* Adjust font size for smaller screens */
+        margin-bottom: 8px;
+    }
+
+    .p-desc {
+        font-size: 14px;  /* Adjust description font size */
+        margin-bottom: 10px;
+        max-width: 100%;  /* Allow description to take full width */
+    }
+
+    .p-meta, .p-role {
+        font-size: 12px; /* Adjust font size for metadata */
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 640px) {
+    .project-card-horizontal {
+        margin: 16px auto;  /* Add auto margin for centering */
+        padding: 10px;  /* Adjust padding for smaller viewports */
+        gap: 10px;
+    }
+
+    .project-image-wrapper {
+        height: 180px;  /* Adjust image height for smaller screens */
+    }
+
+    .p-title {
+        font-size: 18px;  /* Smaller title for mobile */
+        margin-bottom: 6px;
+    }
+
+    .p-desc {
+        font-size: 12px;  /* Smaller description font */
+        margin-bottom: 8px;
+    }
+}
+
 
 /* TILT EFFECT (unused — remove if not needed in future) */
 .tilt {
