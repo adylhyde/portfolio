@@ -199,6 +199,12 @@
     </section>
 </main>
 
+<!-- FOOTER SECTION -->
+<footer class="footer">
+    <p>&copy; <span id="currentYear"></span> Your Company. All rights reserved.</p>
+</footer>
+
+
     
     <!-- CUSTOM JS -->
     <script>
@@ -473,6 +479,29 @@
         });
 
         feather.replace()
+
+        // Set the current year in the footer
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+        // JavaScript to handle navbar visibility on scroll
+        let lastScrollTop = 0;  // Store the last scroll position
+        const navbar = document.querySelector('.navbar');  // Get the navbar
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;  // Get current scroll position
+
+            // If scrolling down, hide the navbar, if scrolling up, show the navbar
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                navbar.classList.add('hide');
+            } else {
+                // Scrolling up
+                navbar.classList.remove('hide');
+            }
+
+            // Update lastScrollTop to current scroll position
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
 
     </script>
 

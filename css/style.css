@@ -15,11 +15,15 @@
 
 body {
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     background: var(--bg);
     color: white;
     overflow-x: hidden;
+    display: flex;  /* enables flexbox layout */
+    flex-direction: column;  /* stack content vertically */
+    min-height: 100vh;
 }
+
 
 section {
     scroll-margin-top: 120px; /* adjust based on navbar height */
@@ -48,12 +52,16 @@ h2 {
     gap: 16px;
     padding: 10px 18px;
     border-radius: 12px;
-
     backdrop-filter: blur(8px) saturate(1.2);
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.06);
     z-index: 300;
+    transition: top 0.3s ease-in-out;
 }
+
+.navbar.hide {
+        top: -100px; /* Hides the navbar by moving it out of view */
+    }
 
 .navbar a {
     color: var(--muted);
@@ -666,3 +674,25 @@ h2 {
         grid-template-columns: 1fr; /* 1 column, 6 rows */
     }
 }
+
+/* ==========================================================
+   FOOTER STYLES
+========================================================== */
+.footer {
+    background-color: var(--footerbg);
+    color: var(--footertext);
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    margin-top: auto;  /* ensures the footer is pushed to the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    z-index: 100;
+}
+
+.footer p {
+    margin: 0;
+}
+
