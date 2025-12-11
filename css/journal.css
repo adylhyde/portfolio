@@ -1,19 +1,6 @@
 /* ==========================================
    GLOBAL BASE
 ========================================== */
-body {
-    background: #0d0d0f;
-    font-family: "Inter", sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    scroll-behavior: smooth;
-    --text-color: #F3F4ED; 
-}
-
 .container {
     width: 100%;
     max-width: 1440px;
@@ -26,7 +13,6 @@ section {
     padding-top: 120px;
     padding-bottom: 120px;
 }
-
 
 /* ==========================================
    JOURNAL TITLE
@@ -42,7 +28,6 @@ section {
     opacity: 0;
 }
 
-
 /* ==========================================
    JOURNAL GRID
 ========================================== */
@@ -51,8 +36,8 @@ section {
     flex-direction: column;
     gap: 90px;
     align-items: center;
+    justify-content: center;
 }
-
 
 /* ==========================================
    JOURNAL CARD (Glass UI)
@@ -65,19 +50,19 @@ section {
     width: 85%;
     border-radius: 22px;
 
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 
     opacity: 0;
     transform: translateY(40px);
+    margin: 0 auto; /* Ensuring cards are centered */
 }
 
 .journal-card:nth-child(even) {
     flex-direction: row-reverse;
 }
-
 
 /* ==========================================
    JOURNAL IMAGES
@@ -88,8 +73,8 @@ section {
     border-radius: 18px;
     overflow: hidden;
 
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 6px 22px rgba(0,0,0,0.55);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
 }
 
 .j-img-wrap img {
@@ -97,7 +82,6 @@ section {
     height: 100%;
     object-fit: cover;
 }
-
 
 /* ==========================================
    JOURNAL TEXT
@@ -124,8 +108,6 @@ section {
     font-size: 14px;
 }
 
-
-
 /* ==========================================
    CITY TOUR SECTION
 ========================================== */
@@ -148,12 +130,9 @@ section {
     z-index: 10;
 }
 
-
-
 /* ==========================================
    CITY CAROUSEL (Full-Image Cards + Overlay)
 ========================================== */
-
 .carousel {
     --items: 6;
     --carousel-duration: 35s;
@@ -171,11 +150,9 @@ section {
     mask-image: linear-gradient(to right, transparent, black 12% 88%, transparent);
 }
 
-
 /* ==========================================
    CITY CARD – FULL IMAGE + OVERLAY TITLE
 ========================================== */
-
 .carousel > article {
     position: absolute;
     top: 0;
@@ -186,8 +163,8 @@ section {
 
     border-radius: 14px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
 
     animation: marquee var(--carousel-duration) linear infinite;
     animation-delay: calc((var(--carousel-duration) / var(--items)) * var(--i) * -1);
@@ -199,14 +176,12 @@ section {
 
 .carousel > article:hover {
     transform: scale(1.05) translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
 }
-
 
 /* ==========================================
    IMAGE fills the entire card
 ========================================== */
-
 .city-img-wrap {
     position: absolute;
     inset: 0;
@@ -220,11 +195,9 @@ section {
     object-fit: cover;
 }
 
-
 /* ==========================================
    TITLE OVERLAY at bottom of image
 ========================================== */
-
 .city-info {
     position: absolute;
     bottom: 0;
@@ -233,7 +206,7 @@ section {
     width: 100%;
     padding: 1.1rem 1rem;
 
-    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3), transparent);
 
     text-align: center;
     pointer-events: none;
@@ -247,11 +220,9 @@ section {
     letter-spacing: 1px;
 }
 
-
 /* ==========================================
    Index Assignment
 ========================================== */
-
 .carousel > article:nth-child(1) { --i: 0; }
 .carousel > article:nth-child(2) { --i: 1; }
 .carousel > article:nth-child(3) { --i: 2; }
@@ -259,11 +230,9 @@ section {
 .carousel > article:nth-child(5) { --i: 4; }
 .carousel > article:nth-child(6) { --i: 5; }
 
-
 /* ==========================================
    MARQUEE ANIMATION
 ========================================== */
-
 @keyframes marquee {
     100% {
         transform: translateX(
@@ -271,54 +240,17 @@ section {
         );
     }
 }
-
-
-/* ==========================================
-   RESPONSIVE (Same Behavior)
-========================================== */
-
-@media (max-width: 920px) {
-
-    .carousel {
-        --carousel-width: 95vw;
-        --carousel-item-width: 240px;
-        --carousel-item-height: 420px;
-    }
-
-    .carousel > article {
-        height: var(--carousel-item-height);
-    }
-
-    .city-info h2 {
-        font-size: 1.15rem;
-    }
-}
-
-
-
-/* ==========================================
-   CAROUSEL ANIMATION
-========================================== */
-@keyframes marquee {
-    100% {
-        transform: translateX(
-            calc((var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) * -1)
-        );
-    }
-}
-
-
 
 /* ==========================================
    RESPONSIVE
 ========================================== */
 @media (max-width: 920px) {
-
     .journal-card {
         flex-direction: column !important;
         text-align: center;
-        width: 95%;
+        width: 90%;
         padding: 30px;
+        margin: 0 auto;
     }
 
     .j-img-wrap {
@@ -339,13 +271,13 @@ section {
 
 @media (max-width: 1140px) {
     .journal-card {
-        width: 90%; /* Adjust the width to fit better on smaller screens */
+        width: 85%;
         padding: 35px;
-        margin: 0 auto; /* Center the cards */
+        margin: 0 auto;
     }
 
     .j-img-wrap {
-        width: 450px; /* Adjust image width for smaller devices */
+        width: 450px;
         height: 320px;
     }
 
@@ -364,16 +296,16 @@ section {
 
 @media (max-width: 768px) {
     .journal-card {
-        flex-direction: column !important; /* Stack the card content */
+        flex-direction: column !important;
         text-align: center;
-        width: 90%; /* Make the card take up less width */
-        padding: 20px; /* Adjust padding for smaller screens */
-        margin: 0 auto; /* Center the card horizontally */
+        width: 90%;
+        padding: 20px;
+        margin: 0 auto;
     }
 
     .j-img-wrap {
         width: 100%;
-        height: 260px; /* Reduce image height */
+        height: 260px;
     }
 
     .j-text h3 {
@@ -386,29 +318,26 @@ section {
 
     .j-text p {
         font-size: 14px;
-        line-height: 1.4; /* Adjust line height for readability */
+        line-height: 1.4;
     }
 
-    /* Journal Grid Adjustment for smaller tablets */
     .journal-grid {
-        gap: 60px; /* Increase gap between cards */
+        gap: 50px;
     }
 }
 
-
 @media (max-width: 425px) {
-    /* Adjust Journal Card Layout */
     .journal-card {
-        width: 100%; /* Set to 100% for better alignment */
+        width: 100%;
         flex-direction: column !important;
         gap: 12px;
-        padding: 15px; /* Adjust padding to fit the screen */
-        margin: 0 auto; /* Center the cards */
+        padding: 15px;
+        margin: 0 auto;
     }
 
     .j-img-wrap {
         width: 100%;
-        height: 200px; /* Smaller height for images */
+        height: 200px;
     }
 
     .j-text h3 {
@@ -421,12 +350,11 @@ section {
 
     .j-text p {
         font-size: 13px;
-        max-width: 100%; /* Allow text to expand fully */
+        max-width: 100%;
     }
 
     .journal-grid {
-        gap: 30px; /* Reduce gap between cards */
-        align-items: center; /* Center the items */
+        gap: 30px;
+        align-items: center;
     }
 }
-

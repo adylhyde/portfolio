@@ -898,9 +898,10 @@ h2 {
    FOOTER STYLES
 ========================================================== */
 .footer {
-    background-color: var(--footerbg);
+    background-color: var(--bg);
     color: var(--footertext);
     text-align: center;
+    margin-top: 20px;
     padding: 20px 0;
     font-size: 14px;
     position: relative;  /* Change from fixed to relative */
