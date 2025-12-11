@@ -16,7 +16,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1150px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -366,9 +366,9 @@ section {
     .journal-card {
         flex-direction: column !important; /* Stack the card content */
         text-align: center;
-        width: 85%;
-        padding: 30px;
-        margin: 0 auto; /* Center the cards */
+        width: 90%; /* Make the card take up less width */
+        padding: 20px; /* Adjust padding for smaller screens */
+        margin: 0 auto; /* Center the card horizontally */
     }
 
     .j-img-wrap {
@@ -391,17 +391,18 @@ section {
 
     /* Journal Grid Adjustment for smaller tablets */
     .journal-grid {
-        gap: 50px;
+        gap: 60px; /* Increase gap between cards */
     }
 }
+
 
 @media (max-width: 425px) {
     /* Adjust Journal Card Layout */
     .journal-card {
-        width: 65%;
+        width: 100%; /* Set to 100% for better alignment */
         flex-direction: column !important;
         gap: 12px;
-        padding: 20px;
+        padding: 15px; /* Adjust padding to fit the screen */
         margin: 0 auto; /* Center the cards */
     }
 
@@ -420,10 +421,12 @@ section {
 
     .j-text p {
         font-size: 13px;
-        max-width: 100%;
+        max-width: 100%; /* Allow text to expand fully */
     }
 
     .journal-grid {
-        gap: 40px;
+        gap: 30px; /* Reduce gap between cards */
+        align-items: center; /* Center the items */
     }
 }
+
