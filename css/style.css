@@ -484,8 +484,14 @@ h2 {
     font-size: 15px;
     opacity: 0.85;
     line-height: 1.5;
-    max-width: 360px;
     margin-bottom: 24px;
+    text-align: justify;
+}
+
+span.highlight {
+    color: #ffd600;
+    font-weight: 600;
+    font-style: italic;
 }
 
 @media (max-width: 768px) {

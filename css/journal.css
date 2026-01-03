@@ -19,7 +19,7 @@ section {
 ========================================== */
 .journal-title {
     text-align: center;
-    margin-top: 160px;
+    margin-top: 100px;
     margin-bottom: 60px;
     font-size: 34px;
     font-weight: 700;
@@ -228,7 +228,6 @@ section {
 .carousel > article:nth-child(3) { --i: 2; }
 .carousel > article:nth-child(4) { --i: 3; }
 .carousel > article:nth-child(5) { --i: 4; }
-.carousel > article:nth-child(6) { --i: 5; }
 
 /* ==========================================
    MARQUEE ANIMATION
