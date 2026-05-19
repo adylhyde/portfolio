@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Adylhide</title>
 
     <!-- GSAP -->
@@ -48,7 +48,7 @@
                 <div class="metal-ring"></div>
                 <div class="engrave-lines"></div>
                 <div class="hero-image-wrapper">
-                    <img src="assets/profile.jpg" class="hero-image">
+                    <img src="assets/profile.jpg" class="hero-image" alt="Portrait of Adelhiede Ahat" title="Adelhiede Ahat">
                 </div>
             </div>
             <h1 class="hero-name">ADELHIEDE AHAT</h1>
@@ -58,7 +58,7 @@
     <!-- SKILLS CAROUSEL -->
     <section id="skills" class="container skills-section">
         <div class="glass-card">
-            <div class="skills-carousel" aria-roledescription="carousel" aria-label="Skills carousel">
+            <div class="skills-carousel" role="region" aria-roledescription="carousel" aria-label="Skills carousel">
             <div class="skills-track" id="skillsTrack" aria-live="polite">
                 <div class="skill-box"><img alt="PHP" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"></div>
                 <div class="skill-box"><img alt="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></div>
@@ -87,18 +87,18 @@
                 <div class="p-desc"><span class="highlight">Crusader Merch Hub</span> is a secure, web-based marketplace designed exclusively for the 
                     Holy Cross of Davao College (HCDC) community. It allows students, faculty, 
                     and staff to buy merchandise in a safe, organized, and sustainable digital platform.</div>
-                <div class="p-role">Designer</div>
+                <div class="p-role">Project Manager</div>
             </div>
-            <div class="project-image-wrapper" aria-roledescription="carousel" aria-label="Project images carousel">
+            <div class="project-image-wrapper" role="region" aria-roledescription="carousel" aria-label="Project images carousel">
                 <div class="project-track" role="group" aria-live="polite">
                     <img src="assets/merch-1.png" alt="project slide 1">
                     <img src="assets/merch-2.png" alt="project slide 2">
                     <img src="assets/merch-3.png" alt="project slide 3">
                 </div>
                 <div class="project-indicators" role="tablist" aria-label="Project image pages">
-                    <button class="project-dot active" type="button" data-index="0" aria-label="View slide 1" aria-pressed="true"></button>
-                    <button class="project-dot" type="button" data-index="1" aria-label="View slide 2" aria-pressed="false"></button>
-                    <button class="project-dot" type="button" data-index="2" aria-label="View slide 3" aria-pressed="false"></button>
+                    <button class="project-dot active" type="button" role="tab" id="proj1-tab-0" data-index="0" aria-label="View slide 1" aria-selected="true" tabindex="0"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj1-tab-1" data-index="1" aria-label="View slide 2" aria-selected="false" tabindex="-1"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj1-tab-2" data-index="2" aria-label="View slide 3" aria-selected="false" tabindex="-1"></button>
                 </div>
             </div>
         </div>
@@ -111,16 +111,16 @@
                     destinations around the world. It offers curated tour packages making trip planning simple, efficient, and affordable.</div>
                 <div class="p-role">Designer</div>
             </div>
-            <div class="project-image-wrapper" aria-roledescription="carousel" aria-label="Project images carousel">
+            <div class="project-image-wrapper" role="region" aria-roledescription="carousel" aria-label="Project images carousel">
                 <div class="project-track" role="group" aria-live="polite">
                     <img src="assets/wander-1.png" alt="project slide 1">
                     <img src="assets/wander-2.png" alt="project slide 2">
                     <img src="assets/wander-3.png" alt="project slide 3">
                 </div>
                 <div class="project-indicators" role="tablist" aria-label="Project image pages">
-                    <button class="project-dot active" type="button" data-index="0" aria-label="View slide 1" aria-pressed="true"></button>
-                    <button class="project-dot" type="button" data-index="1" aria-label="View slide 2" aria-pressed="false"></button>
-                    <button class="project-dot" type="button" data-index="2" aria-label="View slide 3" aria-pressed="false"></button>
+                    <button class="project-dot active" type="button" role="tab" id="proj2-tab-0" data-index="0" aria-label="View slide 1" aria-selected="true" tabindex="0"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj2-tab-1" data-index="1" aria-label="View slide 2" aria-selected="false" tabindex="-1"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj2-tab-2" data-index="2" aria-label="View slide 3" aria-selected="false" tabindex="-1"></button>
                 </div>
             </div>
         </div>
@@ -131,18 +131,39 @@
                 <div class="p-title">MinuteMeals</div>
                 <div class="p-desc"><span class="highlight">MinuteMeals</span> is a recipe-sharing website dedicated to quick, simple, and delicious meals. Explore curated recipes, 
                     weekly featured posts, and easy cooking ideas designed to fit your busy lifestyle—all in one place.</div>
-                <div class="p-role">Designer</div>
+                <div class="p-role">Full-Stack Developer</div>
             </div>
-            <div class="project-image-wrapper" aria-roledescription="carousel" aria-label="Project images carousel">
+            <div class="project-image-wrapper" role="region" aria-roledescription="carousel" aria-label="Project images carousel">
                 <div class="project-track" role="group" aria-live="polite">
                     <img src="assets/meals-1.png" alt="project slide 1">
                     <img src="assets/meals-2.png" alt="project slide 2">
                     <img src="assets/meals-3.png" alt="project slide 3">
                 </div>
                 <div class="project-indicators" role="tablist" aria-label="Project image pages">
-                    <button class="project-dot active" type="button" data-index="0" aria-label="View slide 1" aria-pressed="true"></button>
-                    <button class="project-dot" type="button" data-index="1" aria-label="View slide 2" aria-pressed="false"></button>
-                    <button class="project-dot" type="button" data-index="2" aria-label="View slide 3" aria-pressed="false"></button>
+                    <button class="project-dot active" type="button" role="tab" id="proj3-tab-0" data-index="0" aria-label="View slide 1" aria-selected="true" tabindex="0"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj3-tab-1" data-index="1" aria-label="View slide 2" aria-selected="false" tabindex="-1"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj3-tab-2" data-index="2" aria-label="View slide 3" aria-selected="false" tabindex="-1"></button>
+                </div>
+            </div>
+        </div>
+        <!-- project 4 -->
+        <div class="project-card-horizontal">
+            <div class="project-info">
+                <div class="p-meta">HTML • CSS • JS • PHP</div>
+                <div class="p-title">CETVote</div>
+                <div class="p-desc"><span class="highlight">CETVote</span> is a voting platform for the CET (Computer Engineering Technology) department. It allows students to participate in various polls and elections, ensuring a democratic and inclusive decision-making process.</div>
+                <div class="p-role">Project Manager</div>
+            </div>
+            <div class="project-image-wrapper" role="region" aria-roledescription="carousel" aria-label="Project images carousel">
+                <div class="project-track" role="group" aria-live="polite">
+                    <img src="assets/CET-1.png" alt="project slide 1">
+                    <img src="assets/CET-2.png" alt="project slide 2">
+                    <img src="assets/CET-3.png" alt="project slide 3">
+                </div>
+                <div class="project-indicators" role="tablist" aria-label="Project image pages">
+                    <button class="project-dot active" type="button" role="tab" id="proj3-tab-0" data-index="0" aria-label="View slide 1" aria-selected="true" tabindex="0"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj3-tab-1" data-index="1" aria-label="View slide 2" aria-selected="false" tabindex="-1"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj3-tab-2" data-index="2" aria-label="View slide 3" aria-selected="false" tabindex="-1"></button>
                 </div>
             </div>
         </div>
@@ -166,14 +187,20 @@
             </div>
 
             <div class="cert-card" onclick="openCert(this)">
-                <img src="assets/placeholder.jpg" alt="Certificate 4"/>
+                <img src="assets/indonesia.png" alt="Certificate 4"/>
+            </div>
+            <div class="cert-card" onclick="openCert(this)">
+                <img src="assets/english-for-it-people-and-quantities.png" alt="Certificate 5"/>
+            </div>
+            <div class="cert-card" onclick="openCert(this)">
+                <img src="assets/GDG.png" alt="Certificate 6"/>
             </div>
         </div>
     </section>
 
     <!-- MODAL -->
     <div class="cert-modal-bg" id="certModal">
-        <img id="certModalImg">
+        <img id="certModalImg" alt="Certificate preview">
     </div>
 
     <br>
