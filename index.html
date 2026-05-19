@@ -22,12 +22,14 @@
 <!-- ========================================================= -->
 <nav class="navbar">
     <div class="navbar-toggle">
-        <span>&#9776;</span> <!-- Hamburger icon -->
+        <span class="hamburger-icon">&#9776;</span> <!-- Hamburger icon -->
+        <span class="close-icon">&#10005;</span> <!-- Close icon -->
     </div>
 
     <!-- Navbar links -->
     <div class="navbar-links">
         <a href="#project">Projects</a>
+        <a href="#tech-stack">Tech Stack</a>
         <a href="#certs">Certificates</a>
         <a href="pages/journal.html#journal">Journal</a>
         <a href="#About">Contact</a>
@@ -76,6 +78,7 @@
     </section>
 
 
+
     <!-- PROJECTS SECTION -->
     <section class="projects-section" id="project">
         <h2 class="title">Projects</h2>
@@ -88,6 +91,10 @@
                     Holy Cross of Davao College (HCDC) community. It allows students, faculty, 
                     and staff to buy merchandise in a safe, organized, and sustainable digital platform.</div>
                 <div class="p-role">Project Manager</div>
+                <div class="project-links">
+                    <a href="#" class="project-link demo" target="_blank">🌐 Live Demo</a>
+                    <a href="#" class="project-link github" target="_blank">🔗 GitHub</a>
+                </div>
             </div>
             <div class="project-image-wrapper" role="region" aria-roledescription="carousel" aria-label="Project images carousel">
                 <div class="project-track" role="group" aria-live="polite">
@@ -110,6 +117,10 @@
                 <div class="p-desc"><span class="highlight">Wander</span> is a travel and tour booking website designed to help users easily discover and explore 
                     destinations around the world. It offers curated tour packages making trip planning simple, efficient, and affordable.</div>
                 <div class="p-role">Designer</div>
+                <div class="project-links">
+                    <a href="#" class="project-link demo" target="_blank">🌐 Live Demo</a>
+                    <a href="#" class="project-link github" target="_blank">🔗 GitHub</a>
+                </div>
             </div>
             <div class="project-image-wrapper" role="region" aria-roledescription="carousel" aria-label="Project images carousel">
                 <div class="project-track" role="group" aria-live="polite">
@@ -132,6 +143,10 @@
                 <div class="p-desc"><span class="highlight">MinuteMeals</span> is a recipe-sharing website dedicated to quick, simple, and delicious meals. Explore curated recipes, 
                     weekly featured posts, and easy cooking ideas designed to fit your busy lifestyle—all in one place.</div>
                 <div class="p-role">Full-Stack Developer</div>
+                <div class="project-links">
+                    <a href="#" class="project-link demo" target="_blank">🌐 Live Demo</a>
+                    <a href="#" class="project-link github" target="_blank">🔗 GitHub</a>
+                </div>
             </div>
             <div class="project-image-wrapper" role="region" aria-roledescription="carousel" aria-label="Project images carousel">
                 <div class="project-track" role="group" aria-live="polite">
@@ -149,10 +164,14 @@
         <!-- project 4 -->
         <div class="project-card-horizontal">
             <div class="project-info">
-                <div class="p-meta">HTML • CSS • JS • PHP</div>
+                <div class="p-meta">Next.js • Tailwind CSS • TypeScript • React</div>
                 <div class="p-title">CETVote</div>
                 <div class="p-desc"><span class="highlight">CETVote</span> is a voting platform for the CET (Computer Engineering Technology) department. It allows students to participate in various polls and elections, ensuring a democratic and inclusive decision-making process.</div>
                 <div class="p-role">Project Manager</div>
+                <div class="project-links">
+                    <a href="#" class="project-link demo" target="_blank">🌐 Live Demo</a>
+                    <a href="#" class="project-link github" target="_blank">🔗 GitHub</a>
+                </div>
             </div>
             <div class="project-image-wrapper" role="region" aria-roledescription="carousel" aria-label="Project images carousel">
                 <div class="project-track" role="group" aria-live="polite">
@@ -161,9 +180,9 @@
                     <img src="assets/CET-3.png" alt="project slide 3">
                 </div>
                 <div class="project-indicators" role="tablist" aria-label="Project image pages">
-                    <button class="project-dot active" type="button" role="tab" id="proj3-tab-0" data-index="0" aria-label="View slide 1" aria-selected="true" tabindex="0"></button>
-                    <button class="project-dot" type="button" role="tab" id="proj3-tab-1" data-index="1" aria-label="View slide 2" aria-selected="false" tabindex="-1"></button>
-                    <button class="project-dot" type="button" role="tab" id="proj3-tab-2" data-index="2" aria-label="View slide 3" aria-selected="false" tabindex="-1"></button>
+                    <button class="project-dot active" type="button" role="tab" id="proj4-tab-0" data-index="0" aria-label="View slide 1" aria-selected="true" tabindex="0"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj4-tab-1" data-index="1" aria-label="View slide 2" aria-selected="false" tabindex="-1"></button>
+                    <button class="project-dot" type="button" role="tab" id="proj4-tab-2" data-index="2" aria-label="View slide 3" aria-selected="false" tabindex="-1"></button>
                 </div>
             </div>
         </div>
@@ -207,7 +226,7 @@
     <br>
     <br>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT & CTA SECTION -->
     <section id="About" class="container">
         <div class="glass-card about-card">
             <div class="about-content">
@@ -218,6 +237,15 @@
 
                 <p class="small">Based in Davao City. Available for freelance and collaborative projects.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="container cta-section">
+        <div class="glass-card cta-card">
+            <h2>Let's Work Together</h2>
+            <p>Got a project in mind? I'd love to hear from you. Whether it's a full-time opportunity, freelance project, or just a chat about web development, feel free to reach out!</p>
+            <a href="mailto:roseadelhiede.ahat@hcdc.edu.ph" class="cta-button">Get In Touch</a>
         </div>
     </section>
 
@@ -241,7 +269,15 @@
 
 <!-- FOOTER SECTION -->
 <footer class="footer">
-    <p>&copy; <span id="currentYear"></span> Adelhiede. All rights reserved.</p>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="#" class="social-icon" title="GitHub" target="_blank">GitHub</a>
+            <a href="#" class="social-icon" title="LinkedIn" target="_blank">LinkedIn</a>
+            <a href="#" class="social-icon" title="Twitter" target="_blank">Twitter</a>
+            <a href="#" class="social-icon" title="Email" target="_blank">Email</a>
+        </div>
+        <p>&copy; <span id="currentYear"></span> Adelhiede. All rights reserved.</p>
+    </div>
 </footer>
 
 
